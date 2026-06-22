@@ -1,74 +1,49 @@
-# React + TypeScript + Vite
+# Life in Weeks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Uma visualização filosófica da sua vida inteira — semana por semana.
 
-Currently, two official plugins are available:
+**[→ Acessar o projeto ao vivo](https://jhean-monteiro.github.io/life-in-weeks/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## O que é?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Inspirado no conceito de *"Your Life in Weeks"* do escritor Tim Urban, esse projeto transforma sua vida em uma grade de quadradinhos.
 
-## Expanding the ESLint configuration
+- 🟩 **Verde** → semanas que você já viveu
+- ⬛ **Vazio** → semanas que ainda estão por vir
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Cada quadrado é uma semana. São **4.160 no total** — considerando uma expectativa de vida de 80 anos.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Tecnologias
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Styled Components](https://styled-components.com/)
+- Deploy via [GitHub Pages](https://pages.github.com/) + GitHub Actions
+
+---
+
+## Como rodar localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/Jhean-Monteiro/life-in-weeks.git
+
+# Entre na pasta
+cd life-in-weeks
+
+# Instale as dependências
+npm install
+
+# Rode o servidor de desenvolvimento
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Deploy
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# life-in-weeks
+O deploy é automático via GitHub Actions. Qualquer push na branch `main` atualiza o site.

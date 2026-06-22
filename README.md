@@ -2,7 +2,7 @@
 
 > Uma visualização filosófica da sua vida inteira — semana por semana.
 
-**[→ Acessar o projeto ao vivo](https://jhean-monteiro.github.io/life-in-weeks/)**
+**[→ Acessar o projeto](https://jhean-monteiro.github.io/life-in-weeks/)**
 
 ---
 

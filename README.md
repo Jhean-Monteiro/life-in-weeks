@@ -41,9 +41,3 @@ npm install
 # Rode o servidor de desenvolvimento
 npm run dev
 ```
-
----
-
-## Deploy
-
-O deploy é automático via GitHub Actions. Qualquer push na branch `main` atualiza o site.
